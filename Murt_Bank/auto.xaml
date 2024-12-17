@@ -5,20 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Murt_Bank"
         mc:Ignorable="d"
-        Width="300" Height="450" Background="#FFF4F4F9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Width="300" Height="450" Background="#FFFFFF" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel VerticalAlignment="Center">
             <TextBlock Text="Авторизация" HorizontalAlignment="Center" Style="{StaticResource text}" FontSize="18"/>
+
             <StackPanel Margin="15" >
-                <TextBlock Text="Логин" Style="{StaticResource text}"/>
-                <TextBox Name="tbLogin" Style="{StaticResource TextBoxStyle}" GotFocus="TbLogin_GotFocus"/>
+                <TextBlock Text="Логин" Style="{StaticResource text}" FontSize="18"/>
+                <TextBox Name="tbLogin" Style="{StaticResource TextBoxStyle}" GotFocus="TbLogin_GotFocus" Background="Transparent"
+                         BorderBrush="Transparent" FontSize="18"/>
+                <Separator Margin="10,-15,5,0" Background="#1f4e79"/>
             </StackPanel>
 
             <StackPanel Margin="15" >
-                <TextBlock Text="Пароль" Style="{StaticResource text}"/>
-                <TextBox Name="tbPassword" Style="{StaticResource TextBoxStyle}"
+                <TextBlock Text="Пароль" Style="{StaticResource text}" FontSize="18"/>
+                <TextBox Name="tbPassword" Style="{StaticResource TextBoxStyle}" FontSize="18" Background="Transparent" BorderBrush="Transparent"
                              GotFocus="TbPassword_GotFocus"/>
+                <Separator Margin="10,-15,5,0" Background="#1f4e79"/>
             </StackPanel>
+            
             <Button Content="Вход" Click="btnLogin_Click" Style="{StaticResource buttonMainGreen}" Width="260" Background="#2c7de0" Foreground="White" FontWeight="SemiBold">
                 <Button.Effect>
                     <DropShadowEffect Direction="200" Opacity="0.40"/>

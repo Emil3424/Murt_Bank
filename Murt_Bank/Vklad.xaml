@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Murt_Bank"
         mc:Ignorable="d"
-        Title="Vklad" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="Vklad" Height="450" Width="800" WindowStartupLocation="CenterScreen" x:Name="ggrid">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="60"/>
@@ -40,7 +40,7 @@
             <Label Content="645 845 Руб." FontSize="18" Width="190" Height="60" x:Name="stabkonec"/>
             <Label Content="6,8 % Руб." FontSize="18" Width="150" Height="60"/>
             <Button Content="Открыть вклад" Background="#0078D7" Foreground="White" FontWeight="SemiBold"
-                        Padding="10" FontSize="16" Click="vklad1_Click" Margin="-10,10,10,20">
+                        Padding="10" FontSize="16" Click="vklad_Click" Margin="-10,10,10,20">
                 <Button.Effect>
                     <DropShadowEffect Direction="200" Opacity="0.40"/>
                 </Button.Effect>
@@ -54,7 +54,7 @@
             <Label Content="637 641 Руб." FontSize="18" Width="190" Height="60" x:Name="optimkonec"/>
             <Label Content="5,6 % Руб." FontSize="18" Width="150" Height="60"/>
             <Button Content="Открыть вклад" Background="#0078D7" Foreground="White" FontWeight="SemiBold"
-                        Padding="10" FontSize="16" Click="vklad2_Click" Margin="-10,10,10,20">
+                        Padding="10" FontSize="16" Click="vklad_Click" Margin="-10,10,10,20">
                 <Button.Effect>
                     <DropShadowEffect Direction="200" Opacity="0.40"/>
                 </Button.Effect>
@@ -76,7 +76,7 @@
         </StackPanel>
         <Separator Grid.Row="1" Background="#d8e8f5" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,30,0,0"/>
         <Button Content="Сформировать выписку" Background="#0078D7" Foreground="White" FontWeight="SemiBold" Grid.Column="2" Grid.Row="5"
-                        Padding="10" FontSize="16" HorizontalAlignment="Center" Margin="248,8,284,17" Height="50" VerticalContentAlignment="Center" Click="vklad_Click">
+                        Padding="10" FontSize="16" HorizontalAlignment="Center" Margin="248,8,284,17" Height="50" VerticalContentAlignment="Center" Click="Button_Click">
             <Button.Effect>
                 <DropShadowEffect Direction="200" Opacity="0.40"/>
             </Button.Effect>

@@ -15,7 +15,8 @@
                 <!-- Amount Section -->
                 <TextBlock Text="Сумма" FontSize="20" Margin="0,0,0,5"/>
                 <Grid Margin="0,0,0,10">
-                    <TextBox Text="600000" Width="300" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center" x:Name="tbstab"/>
+                    <TextBox Text="600000" Width="300" HorizontalAlignment="Left" Height="25" MaxLength="8"
+                             PreviewKeyDown="TxtNumber_PreviewKeyDown" PreviewTextInput="TxtNumber_PreviewTextInput" VerticalContentAlignment="Center" x:Name="tbstab" TextChanged="tbstab_TextChanged"/>
                     <TextBlock Text="Руб." VerticalAlignment="Center" Margin="260,0,0,0"/>
                 </Grid>
                 <Slider Minimum="0" Maximum="10000000" Value="600000" TickFrequency="10000" IsSnapToTickEnabled="True"
@@ -30,10 +31,11 @@
                 <!-- Term Section -->
                 <TextBlock Text="Срок" FontSize="20" Margin="0,0,0,5"/>
                 <Grid Margin="0,0,0,10">
-                    <TextBox Text="365" Width="300" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center" x:Name="tbdays"/>
+                    <TextBox Text="360" Width="300" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center" MaxLength="4"
+                             x:Name="tbdays" TextChanged="tbdays_TextChanged" PreviewKeyDown="TxtNumber_PreviewKeyDown" PreviewTextInput="TxtNumber_PreviewTextInput"/>
                     <TextBlock Text="дней" VerticalAlignment="Center" Margin="260,0,0,0"/>
                 </Grid>
-                <Slider Minimum="30" Maximum="1825" Value="365" TickFrequency="30" IsSnapToTickEnabled="True" Margin="0,0,0,10" x:Name="days" ValueChanged="days_ValueChanged"/>
+                <Slider Minimum="30" Maximum="1825" Value="360" TickFrequency="30" IsSnapToTickEnabled="True" Margin="0,0,0,10" x:Name="days" ValueChanged="days_ValueChanged"/>
                 <Grid>
                     <Label Content="1 мес." Margin="-5,-10,10,10"/>
                     <Label Content="1 год" Margin="70,-10,10,10"/>
@@ -44,7 +46,8 @@
                 <!-- Monthly Contribution Section -->
                 <TextBlock Text="Ежемесячное пополнение" FontSize="20" Margin="0,0,0,5"/>
                 <Grid Margin="0,0,0,10">
-                    <TextBox Text="0" Width="300" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center" x:Name="tbpopol"/>
+                    <TextBox Text="0" Width="300" HorizontalAlignment="Left" Height="25" VerticalContentAlignment="Center" MaxLength="7"
+                             x:Name="tbpopol" TextChanged="tbpopol_TextChanged" PreviewKeyDown="TxtNumber_PreviewKeyDown" PreviewTextInput="TxtNumber_PreviewTextInput"/>
                     <TextBlock Text="Руб." VerticalAlignment="Center" Margin="260,0,0,0"/>
                 </Grid>
                 <Slider Minimum="0" Maximum="5000000" Value="0" TickFrequency="10000" IsSnapToTickEnabled="True" Margin="0,0,0,10" x:Name="slpopol" ValueChanged="slpopol_ValueChanged"/>
@@ -65,23 +68,24 @@
                 <StackPanel Margin="40,10,0,0">
                     <TextBlock Text="Стабильный" FontSize="18" FontWeight="Bold" />
                     <TextBlock Text="Доход во вкладу:" FontSize="16" Margin="0,0,0,10"/>
-                    <TextBlock Text="45 845 Руб." FontSize="18" Margin="0,0,0,10" FontWeight="DemiBold" x:Name="stabntb"/>
+                    <TextBlock Text="45845 Руб." FontSize="18" Margin="0,0,0,10" FontWeight="DemiBold" x:Name="stabntb"/>
                     <Separator Margin="0,-15,5,0"/>
 
                     <TextBlock Text="Оптимальный" FontSize="18" FontWeight="Bold" Margin="0,10,0,0"/>
                     <TextBlock Text="Доход по вкладу:" FontSize="16" Margin="0,0,0,10"/>
-                    <TextBlock Text="37 641 Руб." FontSize="18" Margin="0,0,0,10" FontWeight="DemiBold" x:Name="Optimtb"/>
+                    <TextBlock Text="37641 Руб." FontSize="18" Margin="0,0,0,10" FontWeight="DemiBold" x:Name="Optimtb"/>
                     <Separator Margin="0,-15,5,0"/>
 
                     <TextBlock Text="Стандарт" FontSize="18" FontWeight="Bold" Margin="0,10,0,0"/>
                     <TextBlock Text="Доход по вкладу:" FontSize="16" Margin="0,0,0,10" />
-                    <TextBlock Text="40 502 Руб." FontSize="18" Margin="0,0,0,10" FontWeight="DemiBold" x:Name="Standarttb"/>
+                    <TextBlock Text="40502 Руб." FontSize="18" Margin="0,0,0,10" FontWeight="DemiBold" x:Name="Standarttb"/>
                     <Separator Margin="0,-15,5,0"/>
                 </StackPanel>
 
                 <!-- Button -->
                 <Button Content="Сравнить параметры" Background="#0078D7" Foreground="White" FontWeight="SemiBold"
-                        Padding="10" FontSize="16" HorizontalAlignment="Center" Margin="0,0,0,0" Height="40" VerticalContentAlignment="Center" Click="Button_Click">
+                        Padding="10" FontSize="16" HorizontalAlignment="Center" Margin="0,0,0,0" Height="40"
+                        VerticalContentAlignment="Center" Click="Button_Click">
                     <Button.Effect>
                         <DropShadowEffect Direction="200" Opacity="0.40"/>
                     </Button.Effect>

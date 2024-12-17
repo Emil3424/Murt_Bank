@@ -24,15 +24,20 @@
             <!-- Stable Plan Card -->
             <Border BorderBrush="#d0cece" BorderThickness="2" Grid.Column="0" Margin="5">
                 <Grid Background="#F0F8FF">
-                    <TextBlock Text="Стабильный" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" />
-                    <TextBlock/>
-                    <TextBlock/>
-                    <TextBlock Text="Без пополнения" FontSize="14" HorizontalAlignment="Center" Margin="0,60,0,0" />
-                    <TextBlock Text="Без снятия" FontSize="14" HorizontalAlignment="Center" Margin="0,85,0,0"/>
-                    <TextBlock Text="Без капитализации" FontSize="14" HorizontalAlignment="Center" Margin="0,110,0,0"/>
-                    <TextBlock FontSize="14" HorizontalAlignment="Center" Text="Минимальный срок от 3 месяцев" Margin="0,135,0,0"/>
-                    <TextBlock Text="8% годовых" FontSize="20" FontWeight="Bold" Foreground="#002060" HorizontalAlignment="Center" Margin="0,160,0,0"/>
+                    <Grid>
+                        <TextBlock Text="Стабильный" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" />
+                        <TextBlock/>
+                        <TextBlock/>
+                        <TextBlock Text="Без пополнения" FontSize="14" HorizontalAlignment="Center" Margin="0,60,0,0" />
+                        <TextBlock Text="Без снятия" FontSize="14" HorizontalAlignment="Center" Margin="0,85,0,0"/>
+                        <TextBlock Text="Без капитализации" FontSize="14" HorizontalAlignment="Center" Margin="0,110,0,0"/>
+                        <TextBlock FontSize="14" HorizontalAlignment="Center" Text="Минимальный срок от 3 месяцев" Margin="0,135,0,0"/>
+                        <TextBlock Text="8% годовых" FontSize="24" FontWeight="Bold" Foreground="#002060" HorizontalAlignment="Center" Margin="0,160,0,0"/>
+                    </Grid>
                 </Grid>
+                <!--<Border.Effect>
+                    <DropShadowEffect Direction="200" Opacity="0.15"/>
+                </Border.Effect>-->
             </Border>
 
             <!-- Optimal Plan Card -->
@@ -43,7 +48,7 @@
                     <TextBlock Text="Есть возможность снятия" FontSize="14" HorizontalAlignment="Center" Margin="0,85,0,0"/>
                     <TextBlock Text="С капитализацией" FontSize="14" HorizontalAlignment="Center" Margin="0,110,0,0"/>
                     <TextBlock Text="Минимальный срок от 6 месяцев" FontSize="14" HorizontalAlignment="Center" Margin="0,135,0,0"/>
-                    <TextBlock Text="5% годовых" FontSize="20" FontWeight="Bold" Foreground="#002060" HorizontalAlignment="Center" Margin="0,160,0,0" />
+                    <TextBlock Text="5% годовых" FontSize="24" FontWeight="Bold" Foreground="#002060" HorizontalAlignment="Center" Margin="0,160,0,0" />
                 </Grid>
             </Border>
 
@@ -57,7 +62,7 @@
                     <TextBlock Text="Без снятия" FontSize="14" HorizontalAlignment="Center" Margin="0,85,0,0"/>
                     <TextBlock Text="Без капитализации" FontSize="14" HorizontalAlignment="Center" Margin="0,110,0,0"/>
                     <TextBlock Text="Минимальный срок от 3 месяцев" FontSize="14" HorizontalAlignment="Center" Margin="0,135,0,0"/>
-                    <TextBlock Text="6% годовых" FontSize="20" FontWeight="Bold" Foreground="#002060" HorizontalAlignment="Center" Margin="0,160,0,0" />
+                    <TextBlock Text="6% годовых" FontSize="24" FontWeight="Bold" Foreground="#002060" HorizontalAlignment="Center" Margin="0,160,0,0" />
                 </Grid>
             </Border>
         </Grid>
